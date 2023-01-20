@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Encriptador/Desencriptador ALURA</title>
+</head>
+<body>
+	<div class="pantalla">
+		<div class="principal">
+			<div class="logo">
+				<img src="imagenes/Logo.png">
+			</div><div class="areaTexto">
+				<textarea class="textoaEncriptar" id="textoOriginal" rows="9" placeholder="Ingrese el texto aqui"></textarea>
+			</div><div class="mensaje">
+				<p><img class="admiracion" src="imagenes/Vector.png"> Solo letras minúsculas y sin acentos</p>
+			</div><div class="botones" align="center">
+				<button id="btnEncriptar">Encriptar</button>
+				<button id="btnDesencriptar">Desencriptar</button>
+			</div>
+		</div><div class="secundario">
+			<div class="solucion" id="solucion">
+				<img class="muneco" id="muneco" src="imagenes/Muñeco.png">
+				<p class="textoRespuestaInicial">Ningún mensaje fue encontrado</p>
+				<p class="mensajeRespuesta">Ingresa el texto que desees encriptar o desencriptar</p>
+			</div>
+			<div class="respuesta" id="respuesta">
+				<button class="btnCopiar" id="btnCopiar" hidden>Copiar</button>				
+			</div>
+		</div>
+		<p align="center">Desarrollado por Adrian Pastrana Franco</p>
+	</div>
+</body>
+
+<script>
+	var textoOriginal = document.getElementById('textoOriginal');
+	var TextoEncriptado = document.getElementById("textoEncriptado");
+	var solucion;
+
+	document.getElementById("respuesta").style.display = "none";
+
+	function encriptarTexto(){
+		var original = textoOriginal.value;
+		solucion = original.replaceAll("e","enter");
+		solucion = solucion.replaceAll("i","imes");
+		solucion = solucion.replaceAll("a","ai");
+		solucion = solucion.replaceAll("o","ober");
+		solucion = solucion.replaceAll("u","ufat");
+		console.log(solucion);
+		document.getElementById("respuesta").innerHTML = "<p class='textoRespuesta'>" + solucion + "</p><div class='cajaBotonCopiar'><button onclick='copiarTexto();' class='btnCopiar' id='btnCopiar'>Copiar</button></div>";
+		if (document.getElementById("respuesta").style.display == "none") {
+			document.getElementById("solucion").style.display = "none";
+			document.getElementById("respuesta").style.display = "block";
+		}
+	}
+
+	function desencriptarTexto(){
+		var original = textoOriginal.value;
+		solucion = original.replaceAll("enter","e");
+		solucion = solucion.replaceAll("imes","i");
+		solucion = solucion.replaceAll("ai","a");
+		solucion = solucion.replaceAll("ober","o");
+		solucion = solucion.replaceAll("ufat","u");
+		console.log(solucion);
+		document.getElementById("respuesta").innerHTML = "<p class='textoRespuesta'>" + solucion + "</p><div class='cajaBotonCopiar'><button onclick='copiarTexto();' class='btnCopiar' id='btnCopiar'>Copiar</button></div>";
+		if (document.getElementById("respuesta").style.display == "none") {
+			document.getElementById("solucion").style.display = "none";
+			document.getElementById("respuesta").style.display = "block";
+		}
+	}
+
+	function copiarTexto(){
+		const el = document.createElement("textarea");
+		el.value = solucion;
+		el.setAttribute("readonly", "");
+		el.style.position = "absolute";
+		el.style.left = "-9999px";
+		document.body.appendChild(el);
+		el.select();
+		document.execCommand("copy");
+		document.body.removeChild(el);
+		console.log("copiado..." + solucion);
+	}
+
+	var buttonEncriptar = document.getElementById("btnEncriptar");
+	var buttonDesencriptar = document.getElementById("btnDesencriptar");
+	var buttonCopiar = document.getElementById("btnCopiar");
+
+	buttonEncriptar.onclick = encriptarTexto;
+	buttonDesencriptar.onclick = desencriptarTexto;
+	buttonCopiar.onclick = copiarTexto;
+	
+</script>
+</html>

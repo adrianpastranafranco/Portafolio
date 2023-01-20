@@ -1,0 +1,336 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	color: darkslateblue;
+}
+
+body{
+	background: #F3F5FC;
+}
+
+@media screen and (max-width: 640px) { /*movil*/
+
+	.pantalla{
+		display: block;
+		width: 100vw;
+		height: 1000px;
+	}
+
+	.principal{
+		display: block;
+		width: 100%;
+		height: 630px;
+	}
+
+	.secundario{
+		display: block;
+		width: 100%;
+		height: 300px;
+	}
+
+	.logo{
+		padding-top: 15px;
+		width: 90%;
+	}
+
+	.areaTexto{
+		width: 100% - 20px;
+		height: 350px;
+		padding: 10px;
+	}
+
+	.textoaEncriptar{
+		font-size: 32px;
+		width: 95%;
+	}
+
+	.mensaje{
+		padding: 15px;
+	}
+
+	.botones{
+		display: block;
+		width: 100%;
+	}
+
+	button{
+	    width: 80%;
+	    height: 60px;
+	    border-radius: 15px;
+	    margin: 5px 10px;
+	    font-size: 15px;
+	}
+
+	.muneco{
+		visibility: hidden;
+		width: 0px;
+		height: 0px;
+	}
+
+	.solucion{
+		width: 85%;
+		margin: 15px 25px;
+		border-radius: 15px;
+		background: white;
+	}
+
+	.textoRespuestaInicial{
+	    font-size: 20px;
+	    font-weight: bold;
+	    text-align: center;
+	    padding: 25px 15px;
+	    color: darkslategray;
+	}
+
+	.mensajeRespuesta{
+		text-align: center;
+		color: #0A3871;
+		margin: 0px 15px 50px 15px;
+		padding: 25px;
+		padding-bottom: 100px;
+	}
+
+	.respuesta{
+	    margin-top: 5%;
+	    margin-left: 5%;
+	    width: 90%;
+	    border-radius: 15px;
+	    background: white;
+	}
+
+	.textoRespuesta{
+	    font-size: 20px;
+	    text-align: left;
+	    height: 80%;
+	    padding: 25px 15px;
+	    color: darkslategray;
+	}
+
+}
+
+@media screen and (min-width: 640px) and (max-width: 1280px) { /*tablet*/
+
+	.pantalla{
+		width: 100vw;
+		height: 100vh;
+	}
+
+	.principal{
+		width: 100%;
+		height: 80%;
+	}
+
+	.secundario{
+		display: inline-block;
+		width: 100%;
+		height: 20%;
+	}
+
+	.logo{
+		margin: 60px 0px;
+		width: 90%;
+	}
+
+	.areaTexto{
+		width: 100% - 50px;
+		height: 70%;
+		padding: 25px;
+	}
+
+	.textoaEncriptar{
+		font-size: 26px;
+		width: 95%;
+	}
+
+	.mensaje{
+		margin: 15px 15px 15px 100px;
+	}
+
+	.botones{
+		width: 100% - 50px;
+		margin: 25px 25px;
+	}
+
+	button{
+	    width: 40%;
+	    height: 60px;
+	    border-radius: 15px;
+	    margin-left: 20px;
+	    font-size: 15px;
+	}
+
+	.muneco{
+		visibility: hidden;
+		width: 0px;
+		height: 0px;
+	}
+
+	.solucion{
+		width: 80%;
+		margin: 15px 25px 15px 80px;
+		border-radius: 15px;
+		background: white;
+	}
+
+	.textoRespuestaInicial{
+	    font-size: 20px;
+	    font-weight: bold;
+	    text-align: center;
+	    padding: 25px 15px;
+	    color: darkslategray;
+	}
+
+	.mensajeRespuesta{
+		text-align: center;
+		color: #0A3871;
+		margin: 0px 15px 50px 15px;
+		padding: 25px;
+		padding-bottom: 100px;
+	}
+
+	.respuesta{
+	    margin-top: 5%;
+	    margin-left: 5%;
+	    width: 90%;
+	    border-radius: 15px;
+	    background: white;
+	}
+
+	.textoRespuesta{
+	    font-size: 20px;
+	    text-align: left;
+	    height: 80%;
+	    padding: 25px 15px;
+	    color: darkslategray;
+	}
+
+}
+
+@media screen and (min-width: 1280px) { /*computador*/
+
+	.pantalla{
+		width: 100vw;
+		height: 99vh;
+	}
+
+	.principal{
+		display: inline-block;
+		width: 60%;
+		height: 100%;
+		vertical-align: top;
+	}
+
+	.secundario{
+		display: inline-block;
+		width: 40%;
+		height: 100%;
+	}
+
+	.logo{
+		padding: 25px 25px;
+		width: 90%;
+	}
+
+	.areaTexto{
+		width: 100%;
+		height: 50%;
+		padding: 25px 25px 25px 100px;
+	}
+
+	.textoaEncriptar{
+		font-size: 26px;
+		width: 100%;
+	}
+
+	.mensaje{
+		margin-left: 100px;
+	}
+
+	.admiracion{
+		padding: 0;
+	}
+
+	.botones{
+		width: 100% - 50px;
+		margin: 25px 25px;
+	}
+
+	button{
+	    width: 40%;
+	    height: 60px;
+	    border-radius: 15px;
+	    margin-left: 20px;
+	    font-size: 15px;
+	}
+
+	img{
+		padding: 25px 50px;
+	}
+
+	.solucion{
+		width: 80%;
+		margin: 15px;
+		border-radius: 15px;
+		background: white;
+	}
+
+	.textoRespuestaInicial{
+	    font-size: 20px;
+	    font-weight: bold;
+	    text-align: center;
+	    padding: 25px 15px;
+	    color: darkslategray;
+	}
+
+	.mensajeRespuesta{
+		text-align: center;
+		color: #0A3871;
+		margin: 0px 15px 50px 15px;
+		padding: 25px;
+		padding-bottom: 100px;
+	}
+
+	.respuesta{
+	    margin-top: 5%;
+	    width: 90%;
+	    height: 92vh;
+	    border-radius: 15px;
+	    background: white;
+	}
+
+	.textoRespuesta{
+	    font-size: 20px;
+	    text-align: left;
+	    height: 80%;
+	    padding: 25px 15px;
+	    color: darkslategray;
+	}
+
+}
+
+textarea{
+	resize: none;
+	border: none;
+	outline: none;
+	background: #F3F5FC;
+}
+
+#btnEncriptar{
+    background: #0A3871;
+    border-color: #0A3871;
+    color: white;
+}
+
+#btnDesencriptar{
+    border-color: #0A3871;
+    color: #0A3871;;
+}
+
+.btnCopiar{
+    width: 80%;
+    margin-left: 40px;
+    background: white;
+    border-color: #0A3871;
+    color: #0A3871;;
+}
